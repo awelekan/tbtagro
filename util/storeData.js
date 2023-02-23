@@ -74,26 +74,6 @@ const data = {
             desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
         },
     ],
- users: [
-    {
-      name: 'John',
-      email: 'admin@example.com',
-      password: bcrypt.hashSync('123456'),
-      isAdmin: true,
-    },
-     {
-         name: 'Jane',
-         email: 'user@example.com',
-         password: bcrypt.hashSync('123456'),
-         isAdmin: false,
-     },
-      {
-         name: 'June',
-         email: 'seller@example.com',
-         password: bcrypt.hashSync('123456'),
-         isSeller: true,
-     }
-  ],
 
 };
 

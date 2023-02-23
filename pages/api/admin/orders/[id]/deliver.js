@@ -1,10 +1,10 @@
 import { getSession } from 'next-auth/react';
 import Order from '../../../../../models/Order';
-import db from '../../../../../utils/db';
+import db from '../../../../../util/db';
 
 const handler = async (req, res) => {
   const session = await getSession({ req });
-  if (!session || (session && !session.user.isAdmin)) {
+  if (!session || (session && !session.user.isSeller && !session.user.isAdmin)) {
     return res.status(401).send('Error: signin required');
   }
   await db.connect();

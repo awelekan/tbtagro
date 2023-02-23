@@ -5,6 +5,7 @@ import Footer from "./Footer";
 import Header from "./Header";
 import MobileMenu from "./MobileMenu";
 
+
 const Layout = ({
     children,
     parent,

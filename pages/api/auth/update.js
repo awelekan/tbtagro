@@ -1,7 +1,7 @@
 import { getSession } from 'next-auth/react';
 import bcryptjs from 'bcryptjs';
 import User from '../../../models/User';
-import db from '../../../utils/db';
+import db from '../../../util/db';
 
 async function handler(req, res) {
   if (req.method !== 'PUT') {

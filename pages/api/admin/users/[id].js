@@ -1,11 +1,12 @@
-import User from '../../../../models/User';
-import db from '../../../../utils/db';
+
 import { getSession } from 'next-auth/react';
+import User from '../../../../models/User';
+import db from '../../../../util/db';
 
 const handler = async (req, res) => {
   const session = await getSession({ req });
-  if (!session || !session.user.isAdmin) {
-    return res.status(401).send('admin signin required');
+  if (!session || !session.user.isSeller || !session.user.isAdmin) {
+    return res.status(401).send(' signin required');
   }
 
   if (req.method === 'DELETE') {

@@ -1,5 +1,5 @@
 import Product from '../../../models/Product';
-import db from '../../../utils/db';
+import db from '../../../util/db';
 
 const handler = async (req, res) => {
   await db.connect();
