@@ -19,36 +19,43 @@ const IntroPopup = () => {
                 }
             >
                 <div className="modal-dialog">
-                    <div className="modal-content">
+                    <div className="modal-content"
+                   style={{
+                                    backgroundImage:
+                            "url('assets/imgs/banner/popup-2.png')",
+                        width: "",
+                                    height: ""
+                                }}
+                    >
                         <button
                             type="button"
                             className="btn-close"
                             onClick={handleRemove}
                         ></button>
-                        <div className="modal-body">
+                        <div className="modal-body"
+                        
+                        >
                             <div
                                 className="deal"
-                                style={{
-                                    backgroundImage:
-                                        "url('assets/imgs/banner/popup-1.png')",
-                                }}
+                                
+                                 
                             >
-                                <div className="deal-top">
+                                {/* <div className="deal-top">
                                     <h2 className="text-brand">
                                         Deal of the Day
                                     </h2>
                                     <h5>Limited quantities.</h5>
-                                </div>
-                                <div className="deal-content  detail-info">
-                                    <h6 className="product-title">
+                                </div> */}
+                                {/*</div><div className="deal-content  detail-info">
+                                    {/* <h6 className="product-title">
                                         <Link href="/shop-product-right">
                                             <a className="text-heading">
                                                 Organic fruit for your family's
                                                 health
                                             </a>
                                         </Link>
-                                    </h6>
-                                    <div className="clearfix product-price-cover">
+                                    </h6> */}
+                                    {/* <div className="clearfix product-price-cover">
                                         <div className="product-price primary-color float-left">
                                             <span className="current-price text-brand">
                                                 NGR 38
@@ -63,30 +70,30 @@ const IntroPopup = () => {
                                             </span>
                                         </div>
                                     </div>
-                                </div>
+                                </div> */}
                                 <div className="deal-bottom">
-                                    <p className="mb-20">Hurry Up! Offer End In:</p>
+                                    {/* <p className="mb-20">Hurry Up! Offer End In:</p> */}
                                     {/* <Timer endDateTime="2022-11-27 00:00:00" /> */}
-                                    <Timer
+                                    {/* <Timer
                                         endDateTime={fixDate.setDate(
                                             fixDate.getDate() + 2
                                         )}
-                                    />
-                                    <div className="product-detail-rating">
+                                    /> */}
+                                    {/* <div className="product-detail-rating">
 									<div className="product-rate-cover text-end">
 										<div className="product-rate d-inline-block">
 											<div className="product-rating" style={{"width": "90%"}}></div>
 										</div>
 										<span className="font-small ml-5 text-muted"> (32 rates)</span>
 									</div>
-								</div>
+								</div> */}
 
-                                    <Link href="/shop-grid-right">
+                                     {/* <Link href="/">
                                         <a className="btn hover-up">
-                                            Shop Now{" "}
+                                            Get Started{" "}
                                             <i className="fi-rs-arrow-right"></i>
                                         </a>
-                                    </Link>
+                                    </Link>  */}
                                 </div>
                             </div>
                         </div>

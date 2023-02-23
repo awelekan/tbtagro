@@ -3436,6 +3436,7 @@ table .product-thumbnail img {
   border-radius: 25px;
   padding: 40px;
   border: 1px solid #BCE3C9;
+  background-size: contain;
 }
 
 .custom-modal .modal-dialog .btn-close {
@@ -3684,7 +3685,7 @@ text-align: center;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  background-color: #fff;
+  background-color: #fff0;
   background-size: contain;
   background-position: right center;
   background-repeat: no-repeat;
