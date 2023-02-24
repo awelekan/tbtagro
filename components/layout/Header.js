@@ -105,55 +105,13 @@ const Header = ({
                                 {status === 'loading' ? (
                 'Loading'
               ) : session?.user ? (
-                <Menu as="div" className="relative inline-block">
-                  <Menu.Button className="text-blue-600">
-                    {session.user.name}
-                                            </Menu.Button>
+                
+                  
                                             <div className="header-action-right">
                                     <div className="header-action-2">
                                         
-                                        <div className="header-action-icon-2">
-                                            <Link href="/shop-compare">
-                                                <a>
-                                                    <img
-                                                        className="svgInject"
-                                                        alt="Evara"
-                                                        src="/assets/imgs/theme/icons/icon-compare.svg"
-                                                    />
-                                                    <span className="pro-count blue">
-                                                        {totalCompareItems}
-                                                    </span>
-                                                </a>
-                                            </Link>
-
-                                            <Link href="/shop-compare">
-                                                <a>
-                                                    <span className="lable ml-0">
-                                                        Compare
-                                                    </span>
-                                                </a>
-                                            </Link>
-                                                    </div>
-                                                      <div className="header-action-icon-2">
-                                            <Link href="/shop-cart">
-                                                <a className="mini-cart-icon">
-                                                    <img
-                                                        alt="Evara"
-                                                        src="/assets/imgs/theme/icons/icon-cart.svg"
-                                                    />
-                                                    <span className="pro-count blue">
-                                                        {totalCartItems}
-                                                    </span>
-                                                </a>
-                                            </Link>
-                                            <Link href="/shop-cart">
-                                                <a>
-                                                    <span className="lable">
-                                                        Cart
-                                                    </span>
-                                                </a>
-                                            </Link>
-                                        </div>
+                                        
+                                                      
                                         <div className="header-action-icon-2">
                                             <Link href="/shop-wishlist">
                                                 <a>
@@ -183,30 +141,47 @@ const Header = ({
                                                 />
                                             </a></Link>
                                             <Link href="/page-account"><a>
-                                                <span className="lable ml-0">
-                                                    Account
+                                                            <span className="lable ml-0">
+                                                                
+                                                     {session.user.name}
                                                 </span>
                                             </a></Link>
                                             <div className="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
                                                 <ul>
                                                     <li>
-                                                        <Link href="/page-account">
+                                                        <Link href="/profile">
                                                              <a>
                                                                 <i className="fi fi-rs-user mr-10"></i>
-                                                                My Account
+                                                               Profile
                                                             </a></Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/page-account"><a>
+                                                        <Link href="/order-history"><a>
                                                             <i className="fi fi-rs-location-alt mr-10"></i>
-                                                            Order Tracking
+                                                            Order History
                                                         </a></Link>
                                                     </li>
-                                                    <li>
-                                                        <Link href="/page-account"><a>
+                                             <li>
+                                                    {session.user.isAdmin && (
+                      
+                                                    <Link href="/admin/dashboard"><a>
                                                             <i className="fi fi-rs-label mr-10"></i>
-                                                            My Voucher
+                                                             Admin Dashboard
                                                         </a></Link>
+                        
+                         
+                        
+                                                                    )}  
+                                                </li>
+                                                <li>
+                                                    {session.user.isSeller && (
+                      
+                                                    <Link href="/seller/dashboard"><a>
+                                                            <i className="fi fi-rs-label mr-10"></i>
+                                                             Seller Dashboard
+                                                        </a></Link>
+                                    )} 
+                                                        
                                                     </li>
                                                     <li>
                                                         <Link href="/shop-wishlist"><a>
@@ -221,51 +196,41 @@ const Header = ({
                                                         </a></Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/page-login"><a>
-                                                            <i className="fi fi-rs-sign-out mr-10"></i>
+                                                                    <Link href="#"><a
+                                                                    className="dropdown-link"
+                        href="#"
+                        onClick={logoutClickHandler}>
+                                                            <i className="fi fi-rs-sign-out mr-10">
+                                                            </i>
                                                             Sign out
                                                         </a></Link>
                                                     </li>
                                                 </ul>
                                             </div>
+                                                    </div>
+                                                    <div className="header-action-icon-2">
+                                            <Link href="/shop-cart">
+                                                <a className="mini-cart-icon">
+                                                    <img
+                                                        alt="Evara"
+                                                        src="/assets/imgs/theme/icons/icon-cart.svg"
+                                                    />
+                                                    <span className="pro-count blue">
+                                                        {totalCartItems}
+                                                    </span>
+                                                </a>
+                                            </Link>
+                                            <Link href="/shop-cart">
+                                                <a>
+                                                    <span className="lable">
+                                                        Cart
+                                                    </span>
+                                                </a>
+                                            </Link>
                                         </div>
                                                 </div>
                                                 </div>
-                  <Menu.Items className="absolute right-0 w-56 origin-top-right bg-white  shadow-lg ">
-                    <Menu.Item>
-                      <DropdownLink className="dropdown-link" href="/profile">
-                        Profile
-                      </DropdownLink>
-                    </Menu.Item>
-                    <Menu.Item>
-                      <DropdownLink
-                        className="dropdown-link"
-                        href="/order-history"
-                      >
-                        Order History
-                      </DropdownLink>
-                    </Menu.Item>
-                    {session.user.isAdmin && (
-                      <Menu.Item>
-                        <DropdownLink
-                          className="dropdown-link"
-                          href="/admin/dashboard"
-                        >
-                          Admin Dashboard
-                        </DropdownLink>
-                      </Menu.Item>
-                    )}
-                    <Menu.Item>
-                      <a
-                        className="dropdown-link"
-                        href="#"
-                        onClick={logoutClickHandler}
-                      >
-                        Logout
-                      </a>
-                    </Menu.Item>
-                  </Menu.Items>
-                </Menu>
+                  
               ) : (
                                             <div className="d-flex header-action-right header-action-2 ">
                                                  <Link href="/login">
@@ -275,9 +240,9 @@ const Header = ({
                                                 <Link href="/register">
                   <a className="button-header">Join For Free</a>
                                             </Link> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                            <Link href="/sellerreg">
+                                            {/* <Link href="/sellerreg">
                   <a className=" button-header">Become a Seller</a>
-                                            </Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            </Link>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; */}
                                        <Link href="/shop-cart">
                                                 <a className="mini-cart-icon">
                                                     <img

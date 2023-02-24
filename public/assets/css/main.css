@@ -6743,11 +6743,15 @@ h6.post-title {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+        position: relative;
+        right: 60px;
+        
 }
 
 .header-action-2 .header-action-icon-2 span.lable {
   font-size: 16px;
   margin: 5px 0 0 10px;
+  color: #fff
 }
 
 .header-action-2 .header-action-icon-2:last-child {
