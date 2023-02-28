@@ -117,7 +117,7 @@ const Header = ({
                                                 <a>
                                                     <img
                                                         className="svgInject"
-                                                        alt="Evara"
+                                                        alt="TBT Agro"
                                                         src="/assets/imgs/theme/icons/icon-heart.svg"
                                                     />
                                                     <span className="pro-count blue">
@@ -136,7 +136,7 @@ const Header = ({
                                             <Link href="/page-account"><a>
                                                 <img
                                                     className="svgInject"
-                                                    alt="Nest"
+                                                    alt=""
                                                     src="/assets/imgs/theme/icons/icon-user.svg"
                                                 />
                                             </a></Link>
@@ -147,20 +147,19 @@ const Header = ({
                                                 </span>
                                             </a></Link>
                                             <div className="cart-dropdown-wrap cart-dropdown-hm2 account-dropdown">
-                                                <ul>
-                                                    <li>
-                                                        <Link href="/profile">
-                                                             <a>
-                                                                <i className="fi fi-rs-user mr-10"></i>
-                                                               Profile
-                                                            </a></Link>
-                                                    </li>
-                                                    <li>
-                                                        <Link href="/order-history"><a>
-                                                            <i className="fi fi-rs-location-alt mr-10"></i>
-                                                            Order History
+                                                        <ul>
+                                                              <li>
+                                                    {session.user.isSeller && (
+                      
+                                                    <Link href="/seller/dashboard"><a>
+                                                            <i className="fi fi-rs-label mr-10"></i>
+                                                             Seller Dashboard
                                                         </a></Link>
-                                                    </li>
+                        
+                         
+                        
+                                                                    )}  
+                                                </li>
                                              <li>
                                                     {session.user.isAdmin && (
                       
@@ -173,6 +172,21 @@ const Header = ({
                         
                                                                     )}  
                                                 </li>
+                                                    <li>
+                                                        <Link href="/page-account">
+                                                             <a>
+                                                                <i className="fi fi-rs-user mr-10"></i>
+                                                               Profile
+                                                            </a></Link>
+                                                    </li>
+                                                    <li>
+                                                        <Link href="/order-history"><a>
+                                                            <i className="fi fi-rs-location-alt mr-10"></i>
+                                                            Order History
+                                                        </a></Link>
+                                                            </li>
+
+                                                          
                                                 <li>
                                                     {session.user.isSeller && (
                       
@@ -190,9 +204,9 @@ const Header = ({
                                                         </a></Link>
                                                     </li>
                                                     <li>
-                                                        <Link href="/page-account"><a>
+                                                        <Link href="/profile"><a>
                                                             <i className="fi fi-rs-settings-sliders mr-10"></i>
-                                                            Setting
+                                                            Update
                                                         </a></Link>
                                                     </li>
                                                     <li>
@@ -212,7 +226,7 @@ const Header = ({
                                             <Link href="/shop-cart">
                                                 <a className="mini-cart-icon">
                                                     <img
-                                                        alt="Evara"
+                                                        alt="TBT Agro"
                                                         src="/assets/imgs/theme/icons/icon-cart.svg"
                                                     />
                                                     <span className="pro-count blue">
@@ -246,7 +260,7 @@ const Header = ({
                                        <Link href="/shop-cart">
                                                 <a className="mini-cart-icon">
                                                     <img
-                                                        alt="Evara"
+                                                        alt="TBT Agro"
                                                         src="/assets/imgs/theme/icons/icon-cart.svg"
                                                     />
                                                     <span className="pro-count blue">
@@ -564,7 +578,7 @@ const Header = ({
                                         <Link href="/shop-wishlist">
                                             <a>
                                                 <img
-                                                    alt="Evara"
+                                                    alt="TBT Agro"
                                                     src="/assets/imgs/theme/icons/icon-compare.svg"
                                                 />
                                                 <span className="pro-count white">
@@ -577,7 +591,7 @@ const Header = ({
                                         <Link href="/shop-wishlist">
                                             <a>
                                                 <img
-                                                    alt="Evara"
+                                                    alt="TBT Agro"
                                                     src="/assets/imgs/theme/icons/icon-heart.svg"
                                                 />
                                                 <span className="pro-count white">
@@ -590,7 +604,7 @@ const Header = ({
                                         <Link href="/shop-cart">
                                             <a className="mini-cart-icon">
                                                 <img
-                                                    alt="Evara"
+                                                    alt="TBT Agro"
                                                     src="/assets/imgs/theme/icons/icon-cart.svg"
                                                 />
                                                 <span className="pro-count white">
@@ -605,7 +619,7 @@ const Header = ({
                                                         <Link href="/shop-grid-right">
                                                             <a>
                                                                 <img
-                                                                    alt="Evara"
+                                                                    alt="TBT Agro"
                                                                     src="/assets/imgs/shop/thumbnail-3.jpg"
                                                                 />
                                                             </a>
@@ -639,7 +653,7 @@ const Header = ({
                                                         <Link href="/shop-grid-right">
                                                             <a>
                                                                 <img
-                                                                    alt="Evara"
+                                                                    alt="TBT Agro"
                                                                     src="/assets/imgs/shop/thumbnail-4.jpg"
                                                                 />
                                                             </a>
