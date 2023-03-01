@@ -80,12 +80,15 @@ function AdminDashboardScreen() {
   };
   return (
     <Layout title="Admin Dashboard">
+      <div className='container'>
+
+      <div className='row d-flex'>
       <div className="grid  md:grid-cols-4 md:gap-5">
         <div>
           <ul>
             <li>
               <Link href="/admin/dashboard">
-                <a className="font-bold">Dashboard</a>
+                <a className="tab-pane font-bold">Dashboard</a>
               </Link>
             </li>
             <li>
@@ -99,7 +102,7 @@ function AdminDashboardScreen() {
             </li>
           </ul>
         </div>
-        <div className="md:col-span-3">
+        <div className=" md:col-span-3">
           <h1 className="mb-4 text-xl">Admin Dashboard</h1>
           {loading ? (
             <div>Loading...</div>
@@ -107,8 +110,8 @@ function AdminDashboardScreen() {
             <div className="alert-error">{error}</div>
           ) : (
             <div>
-              <div className="grid grid-cols-1 md:grid-cols-4">
-                <div className="card m-5 p-5">
+              <div className=" display-14 grid grid-cols-1 md:grid-cols-4">
+                <div className=" card m-5 p-5">
                   <p className="text-3xl">${summary.ordersPrice} </p>
                   <p>Sales</p>
                   <Link href="/admin/orders">View sales</Link>
@@ -136,11 +139,15 @@ function AdminDashboardScreen() {
                 }}
                 data={data}
               />
-            </div>
+                  </div>
+                  
           )}
         </div>
+          </div>
+          </div>
       </div>
-    </Layout>
+      </Layout>
+    
   );
 }
 

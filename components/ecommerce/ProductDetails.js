@@ -49,7 +49,7 @@ const ProductDetails = ({
             <section className="mt-50 mb-50">
                 <div className="container">
                     <div className="row flex-row-reverse">
-                        <div className="col-xl-8 col-lg-8 m-auto">
+                        <div className="col-xl-10 col-lg-12 m-auto">
                             <div className="product-detail accordion-detail">
                                 <div className="row mb-50  mt-30">
                                     <div className="col-md-6 col-sm-12 col-xs-12 mb-md-0 mb-sm-5">
@@ -65,8 +65,7 @@ const ProductDetails = ({
                                     </div>
                                     <div className="col-md-6 col-sm-12 col-xs-12">
                                         <div className="detail-info  pr-30 pl-30">
-                                         <span className="stock-status out-stock"> <h3>Seller ID: {product.id}</h3>  </span> <br/>
-                                            <span className="stock-status out-stock"> Sale Off </span>
+                                            <span className="stock-status out-stock"> </span>
                                             <h2 className="title-detail">{product.title}</h2>
                                             <div className="product-detail-rating">
                                                 <div className="product-rate-cover text-end">
@@ -78,10 +77,10 @@ const ProductDetails = ({
                                             </div>
                                             <div className="clearfix product-price-cover">
                                                 <div className="product-price primary-color float-left">
-                                                    <span className="current-price  text-brand">NGR {product.price}</span>
+                                                    <span className="current-price  text-brand">₦{product.price}</span>
                                                     <span>
                                                         <span className="save-price font-md color3 ml-15">{product.discount.percentage}% Off</span>
-                                                        <span className="old-price font-md ml-15">{product.oldPrice ? `$ ${product.oldPrice}` : null}</span>
+                                                        <span className="old-price font-md ml-15">{product.oldPrice ? `₦ ${product.oldPrice}` : null}</span>
                                                     </span>
                                                 </div>
                                             </div>
@@ -90,25 +89,33 @@ const ProductDetails = ({
                                                 <p className="font-lg">{product.desc}</p>
                                             </div>
                                             <div className="attr-detail attr-color mb-15">
-                                                <strong className="mr-10">Color</strong>
-                                             
+                                                {/* <strong className="mr-10">Color</strong>
+                                                <ul className="list-filter color-filter">
+                                                    {product.variations.map((clr, i) => (
+                                                        <li key={i}>
+                                                            <a href="#">
+                                                                <span className={`product-color-${clr}`}></span>
+                                                            </a>
+                                                        </li>
+                                                    ))}
+                                                </ul> */}
                                             </div>
                                             <div className="attr-detail attr-size">
-                                                <strong className="mr-10">Size</strong>
+                                                {/* <strong className="mr-10">Size</strong>
                                                 <ul className="list-filter size-filter font-small">
                                                     <li className="active">
-                                                        <a></a>
+                                                        <a>M</a>
                                                     </li>
                                                     <li>
-                                                        <a></a>
+                                                        <a>L</a>
                                                     </li>
                                                     <li>
-                                                        <a></a>
+                                                        <a>XL</a>
                                                     </li>
                                                     <li>
-                                                        <a></a>
+                                                        <a>XXL</a>
                                                     </li>
-                                                </ul>
+                                                </ul> */}
                                             </div>
                                             <div className="bt-1 border-color-1 mt-30 mb-30"></div>
                                             <div className="detail-extralink">
@@ -141,7 +148,7 @@ const ProductDetails = ({
                                                     </a>
                                                 </div>
                                             </div>
-                                            <ul className="product-meta font-xs color-grey mt-50">
+                                            {/* <ul className="product-meta font-xs color-grey mt-50">
                                                 <li className="mb-5">
                                                     SKU:
                                                     <a href="#">FWM15VKT</a>
@@ -156,17 +163,14 @@ const ProductDetails = ({
                                                     Availability:
                                                     <span className="in-stock text-success ml-5">{product.stock} Items In Stock</span>
                                                 </li>
-                                            </ul>
+                                            </ul> */}
                                         </div>
                                     </div>
                                 </div>
 
                                 {quickView ? null : (
                                     <>
-                                        <div>
-                                           <ProductTab /> 
-                                      </div>
-                                        
+                                        <ProductTab />
                                         <div className="row mt-60">
                                             <div className="col-12">
                                                 <h3 className="section-title style-1 mb-30">Related products</h3>

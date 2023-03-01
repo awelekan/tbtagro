@@ -55,7 +55,8 @@ const BestSellerSlider = () => {
                                         </h6>
                         <div className="product-price">
                             <span>${product.price} </span>
-                            <span className="old-price">{product.oldPrice && `$ ${product.oldPrice}`}</span>
+                            <span className="old-price">{product.oldPrice && `
+                             ${product.oldPrice}`}</span>
                         </div>
                             </div>
                             </div>

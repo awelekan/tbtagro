@@ -821,6 +821,10 @@ h6 {
       box-shadow: 5px 5px 15px rgb(0 0 0 / 5%);
     }
 
+    .display-14{
+      display: flex;
+    }
+
 element.style {}
 
 .text-11 {

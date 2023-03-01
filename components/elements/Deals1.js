@@ -42,14 +42,14 @@ const Deals1 = ({ product, addToCart }) => {
                             <span className="font-small text-muted">
                                 By{" "}
                                 <Link href="/vendor/1">
-                                    <a>NestFood</a>
+                                    <a>{user.name}</a>
                                 </Link>
                             </span>
                         </div>
                         <div className="product-card-bottom">
                             <div className="product-price">
-                                <span>${product.price}</span>
-                                <span className="old-price">{product.oldPrice && `$ ${product.oldPrice}`}</span>
+                                <span>₦{product.price}</span>
+                                <span className="old-price">{product.oldPrice && `₦ ${product.oldPrice}`}</span>
                             </div>
                             <div className="add-cart">
                                 <a className="add" onClick={(e) => handleCart(product)}>

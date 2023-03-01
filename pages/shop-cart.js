@@ -115,7 +115,7 @@ const Cart = ({
                                                         data-title="Price"
                                                     >
                                                         <h4 className="text-brand">
-                                                            ${item.price}
+                                                            ₦{item.price}
                                                         </h4>
                                                     </td>
                                                     <td
@@ -154,7 +154,7 @@ const Cart = ({
                                                         data-title="Cart"
                                                     >
                                                         <h4 className="text-body">
-                                                            $
+                                                            ₦
                                                             {item.quantity *
                                                                 item.price}
                                                         </h4>
@@ -1065,7 +1065,7 @@ const Cart = ({
                                                             </td>
                                                             <td className="cart_total_amount">
                                                                 <span className="font-lg fw-900 text-brand">
-                                                                    $ {price()}
+                                                                    ₦ {price()}
                                                                 </span>
                                                             </td>
                                                         </tr>
@@ -1085,7 +1085,7 @@ const Cart = ({
                                                             <td className="cart_total_amount">
                                                                 <strong>
                                                                     <span className="font-xl fw-900 text-brand">
-                                                                        $
+                                                                        ₦
                                                                         {price()}
                                                                     </span>
                                                                 </strong>

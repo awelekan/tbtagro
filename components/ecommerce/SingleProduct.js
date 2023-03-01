@@ -128,8 +128,8 @@ const SingleProduct = ({
 
                     <div className="product-card-bottom">
                         <div className="product-price">
-                            <span>${product.price} </span>
-                            <span className="old-price">{product.oldPrice && `$ ${product.oldPrice}`}</span>
+                            <span>₦{product.price} </span>
+                            <span className="old-price">{product.oldPrice && `₦ ${product.oldPrice}`}</span>
                         </div>
                         <div className="add-cart">
                             <a
